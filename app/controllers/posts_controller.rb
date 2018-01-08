@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
   
   def index
-  @posts = Post.all
+    @posts = Post.all
   end
   
   def new
@@ -34,4 +34,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 
+  def destroy
+    @posts = Post.destroy(params[:id])
+  end
 end
