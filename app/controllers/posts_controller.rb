@@ -4,7 +4,14 @@ class PostsController < ApplicationController
   end
   
   def update
+    @post = Post.find(params[:id])
     
+    if @post.update_attributes(post_params)
+      redirect_to post_path(@post)
+    else
+      flash[:alert] = @post.errors.full_messages
+      redirect_to edit_post_path(@post)
+    end
   end
   
   def show
