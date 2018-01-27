@@ -16,17 +16,56 @@
  
  @import "bootstrap-sprockets";
  
- // optional theme
- @import "bootswatch/cerulean/variables";
+ // Optional theme
+ @import "bootswatch/lumen/variables";
  //
  
  @import "bootstrap";
  
  // Optional Theme as well
-  @import "bootswatch/cerulean/bootswatch";
+  @import "bootswatch/lumen/bootswatch";
  //
  
- .alert {
-     color:red;
-     font-style: italic;
- }
+.alert {
+    color:red;
+    font-style: italic;
+}
+ 
+.bold {
+    font-weight: bold;
+}
+ 
+.blog-title {
+     padding: 1rem 0 3rem 0;
+}
+
+.post-body {
+    width: 90%;
+    height: 400px;
+}
+
+.post-title {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 24px;
+}
+ 
+.post-title-label, .post-body-label {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+
+.post-title, .post-body {
+    outline: none;
+    border: 1px solid #cccccc;
+}
+
+.my-button-group {
+    color: blue;
+    border: 1px solid #cccccc;
+}
+
+.form-control.post_body-quill {
+    height: 500px;
+}

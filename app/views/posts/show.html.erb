@@ -1,14 +1,18 @@
-<% if current_user == @post.user %>
-    <%= link_to "Edit", edit_post_path(@post) %>
-    <%= button_to 'Delete Post', post_path(@post.id), method: :delete, data: { confirm: 'Are you sure?' }%>
-<% end %>    
+
+<div class: “my-button-group”>
+    <% if current_user == @post.user %>
+        <%= button_to "Edit", edit_post_path(@post), method: :get %>
+        <%= button_to 'Delete Post', post_path(@post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>    
+</div>
+
 
 <h1><%= @post.title %></h1>
 <p><%= @post.pretty_word_count %></p>
 
 <br>
 
-<p><%= @post.body %></p>
+<p><%= @post.body.html_safe %></p>
 
 <br>
 
